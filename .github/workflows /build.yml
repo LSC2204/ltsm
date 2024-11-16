@@ -1,12 +1,13 @@
 name: Run Test
 
 on:
-  pull_request:
-    branches: 
-    - 'ltsm-stack'
   push:
     branches:
     - 'ltsm-stack'
+  pull_request:
+    branches: 
+    - 'ltsm-stack'
+  
 jobs:
   test:
     runs-on: ${{ matrix.os }}
